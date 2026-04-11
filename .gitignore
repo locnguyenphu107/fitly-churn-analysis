@@ -1,0 +1,27 @@
+# Ignore Python virtual environments
+*venv/
+venv/
+.venv/
+bin/
+lib/
+include/
+etc/
+share/
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore scratchpad/draft notebooks
+cleaning.ipynb
+cleaning2.ipynb
+
+# Ignore exported HTML versions of cleaning notebooks
+cleaning.html
+
+# Ignore personal notes
+note.md
+
+# General Python/Mac ignores
+.DS_Store
+__pycache__/
+venv/
