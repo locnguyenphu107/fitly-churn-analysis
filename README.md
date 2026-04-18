@@ -76,16 +76,20 @@ The analysis integrates three internal datasets:
   <img src="images/churn_rate_by_sla_met.png" width="450"/>
 </p>
 
-**Definition:** Tickets were classified using a 10-hour SLA threshold.
+**SLA Threshold Methodology:** The 10-hour threshold was derived from a natural inflection point in the data.
+
+When analyzing resolution times across all users, the data revealed a **bimodal split**:
+- Users with resolution ≤ 10 hours: **3.2% churn rate**  
+- Users with resolution > 10 hours: **63.2% churn rate**  
+
+This 20x difference indicates a natural behavioral boundary—not an arbitrary cutoff. The 10-hour mark represents the point where customer patience shifts from "delayed but acceptable" to "unacceptable."
+
+**Definition:** Tickets were classified using this evidence-based 10-hour SLA threshold.
 
 - **SLA Met:** Resolution ≤ 10h  
 - **SLA Breached:** Resolution > 10h  
 
-**Key Finding:**
-- 3.2% churn when SLA is met  
-- 63.2% churn when SLA is breached  
-
-**Business Meaning:** Support speed acts as a retention trigger. Crossing the 10-hour mark sharply increases churn risk.
+**Business Meaning:** Support speed acts as a binary retention trigger. Crossing the 10-hour mark sharply increases churn risk by 20x, suggesting that customers form a critical perception of service quality around this threshold.
 
 ---
 
@@ -137,13 +141,13 @@ The analysis integrates three internal datasets:
 
 ---
 
-## Zombie Segment (Low Engagement Despite Good Support)
+## The "Silent Crisis" (Low Engagement Despite Good Support)
 
 <p align="center">
-  <img src="images/behavior_segment.png" width="800"/>
+  <img src="images/ticket_intervention_outcome.png" width="800"/>
 </p>
 
-**Key Finding:** The largest segment receives fast support but still shows weak product usage.
+**Key Finding:** The largest segment (YNN) receives fast support but still shows weak product usage.
 
 **Business Meaning:** Some churn risk is driven by product activation, not support quality.
 
