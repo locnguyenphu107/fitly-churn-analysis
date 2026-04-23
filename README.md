@@ -179,6 +179,26 @@ This 20x difference indicates a natural behavioral boundary—not an arbitrary c
 
 **Business Meaning:** Privacy deletion requests may reflect final-stage churn behavior rather than isolated compliance behavior.
 
+### Churn Rate: GDPR vs. Non-GDPR Users
+
+| Segment | Users | Churned | Churn Rate |
+|---|---|---|---|
+| Non-GDPR users | 357 | 97 | **27.2%** |
+| GDPR requestors | 43 | 17 | **39.5%** |
+
+Users who submitted a data deletion request churned at a rate **45% higher** than the rest of the user base (39.5% vs 27.2%).
+
+Breaking down GDPR users by churn outcome reveals the same support latency pattern seen across the broader dataset:
+
+| Outcome | Avg Wait Time | Avg App Events |
+|---|---|---|
+| GDPR — Retained | 7.3h | 1.50 |
+| GDPR — Churned | 19.1h | 0.29 |
+
+**Insight:** Within the GDPR group, retained users received support well under the 10-hour SLA (7.3h), while churned users experienced an average wait of 19.1 hours—nearly triple that of retained peers. Their near-zero app activity (0.29 events) also indicates they had already disengaged from the product before filing the deletion request.
+
+**Business Meaning:** The elevated churn rate among GDPR users is not driven by privacy concerns—it is driven by the same support latency failure seen across all churned users. The data deletion request is best interpreted as the final administrative step of a user who had already decided to leave. Addressing the 10-hour SLA breach would reduce churn risk in this segment to the same degree as the broader population.
+
 ---
 
 # 📌 Key Insights
